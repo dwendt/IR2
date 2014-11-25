@@ -1,0 +1,14 @@
+#!/bin/bash
+
+node="$(which nodejs 2>/dev/null)";
+if [ $? -gt 0];
+	then node="$(which node)";
+fi
+
+case "$1" in
+	setup)
+		echo "Setting up IR2";
+
+		"$node" app --setup "$@"
+		;;
+fi
