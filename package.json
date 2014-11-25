@@ -1,31 +1,32 @@
 {
-	"name": "ir2",
-	"license": "not sure",
-	"description": "Interactive R2 WebGUI",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/dwendt/IR2.git"
-	},
-	"main": "app.js",
-	"scripts": {
-		"start": "./ir2 start",
-		"stop": "./ir2 stop"
-	},
-	"dependencies": {
-		"nconf": "^0.6.9",
-		"winston": "^0.8.3"
-	},
-	"bugs": {
-		"url": "https://github.com/dwendt/IR2/issues"
-	},
-	"engines": {
-		"node": ">=0.10"
-	},
-	"maintainers": [
-		{
-			"name": "Ditmar Wendt",
-			"email": "dwn@is.an.actual.ninja",
-			"url": "https://github.com/dwendt"
-		}
-	]
+  "name": "ir2",
+  "license": "not sure",
+  "description": "Interactive R2 WebGUI",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dwendt/IR2.git"
+  },
+  "main": "app.js",
+  "scripts": {
+    "start": "./ir2 start",
+    "stop": "./ir2 stop"
+  },
+  "dependencies": {
+    "nconf": "^0.6.9",
+    "winston": "^0.8.3",
+    "express": "^4.10.4"
+  },
+  "bugs": {
+    "url": "https://github.com/dwendt/IR2/issues"
+  },
+  "engines": {
+    "node": ">=0.10"
+  },
+  "maintainers": [
+    {
+      "name": "Ditmar Wendt",
+      "email": "dwn@is.an.actual.ninja",
+      "url": "https://github.com/dwendt"
+    }
+  ]
 }
