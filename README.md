@@ -16,4 +16,4 @@ Dependencies
 ===
 
 * nconf
-* winston
+* winston - https://github.com/flatiron/winston
