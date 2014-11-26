@@ -1,12 +1,21 @@
 "use strict";
 
 var fs    = require('fs'),
+    path  = require('path'),
     nconf = require('nconf');
 
 // nconf should use command-line args, then env vriables. 
 nconf.argv().env();
 
 global.env = process.env.NODE_ENV || 'production';
+
+var configFile = path.join(__dirname, '/config.json');
+// these would have been passed on the command line or env
+if(nconf.get("setup")) {
+  setup();
+} else {
+  start();
+}
 
 
 function loadConfig() {
@@ -18,7 +27,7 @@ function loadConfig() {
   nconf.defaults({
     base_dir: __dirname,                                  // just where everything is at.
     files_location: path.join(__dirname, 'uploads'),      // path to store uploaded files for analysis in
-    views_dir: path.join(__dirname, 'public/templates')   // handlebars templates to render
+    views_dir: path.join(__dirname, 'src/views')          // handlebars templates to render
   });
 }
 
@@ -69,4 +78,8 @@ function shutdown(code) {
   winston.info('[app] Shutdown complete.');
 
   process.exit(code || 0);
+}
+
+function setup() {
+
 }
